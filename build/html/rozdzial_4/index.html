@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="pl" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4. Definiowanie bazy danych i wprowadzanie danych do bazy &#8212; Sprawozdanie Bazy Danych 0.0.1 - dokumentacja</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=12dfc556" />
+    <script src="../_static/documentation_options.js?v=15e49708"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=4c397337"></script>
+    <link rel="index" title="Indeks" href="../genindex.html" />
+    <link rel="search" title="Szukaj" href="../search.html" />
+    <link rel="next" title="5. Zapytania do bazy danych" href="../rozdzial_5/index.html" />
+    <link rel="prev" title="3. Planowanie baz danych i tworzenie dokumentacji" href="../rozdzial_3/index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="definiowanie-bazy-danych-i-wprowadzanie-danych-do-bazy">
+<h1><span class="section-number">4. </span>Definiowanie bazy danych i wprowadzanie danych do bazy<a class="headerlink" href="#definiowanie-bazy-danych-i-wprowadzanie-danych-do-bazy" title="Link to this heading">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Autorzy<span class="colon">:</span></dt>
+<dd class="field-odd"><ol class="arabic simple">
+<li><p>Wiktor Głogowski</p></li>
+<li><p>Olga Grześkowiak</p></li>
+<li><p>Kamil Karaś</p></li>
+</ol>
+</dd>
+</dl>
+<p>Rozdział ten opisuje proces fizycznego zdefiniowania struktur bazodanowych oraz zasilenia ich danymi testowymi. Prace przeprowadzono równolegle dla dwóch wybranych systemów zarządzania bazami danych: relacyjnego serwera <strong>PostgreSQL</strong> oraz lekkiej, plikowej bazy <strong>SQLite</strong>.</p>
+<section id="definiowanie-bazy-danych">
+<h2><span class="section-number">4.1. </span>Definiowanie bazy danych<a class="headerlink" href="#definiowanie-bazy-danych" title="Link to this heading">¶</a></h2>
+<p>Struktury tabel, relacje oraz więzy integralności dla obu systemów zostały utworzone na podstawie skryptów DDL (Data Definition Language) wygenerowanych w fazie projektowania fizycznego. W przypadku PostgreSQL struktury zdefiniowano z poziomu narzędzia pgAdmin, wykonując zapytania w oknie Query Tool. Dla bazy SQLite wykorzystano bezpośrednie połączenie z plikiem bazy (<code class="docutils literal notranslate"><span class="pre">wypozyczalnia.db</span></code>) i wykonano odpowiadające mu instrukcje DDL.</p>
+</section>
+<section id="wybor-mechanizmow-wsadowego-wprowadzania-danych">
+<h2><span class="section-number">4.2. </span>Wybór mechanizmów wsadowego wprowadzania danych<a class="headerlink" href="#wybor-mechanizmow-wsadowego-wprowadzania-danych" title="Link to this heading">¶</a></h2>
+<p>Ze względu na potrzebę załadowania większej ilości danych testowych, zrezygnowano z ręcznego wprowadzania rekordów komendą <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> na rzecz wsadowego importu danych. Dane źródłowe zostały wcześniej przygotowane i wyeksportowane do płaskich plików tekstowych w formacie CSV, w których jako separatora kolumn użyto średnika (<code class="docutils literal notranslate"><span class="pre">;</span></code>).</p>
+<section id="postgresql-pgadmin-import-export-data">
+<h3><span class="section-number">4.2.1. </span>PostgreSQL: pgAdmin (Import/Export Data)<a class="headerlink" href="#postgresql-pgadmin-import-export-data" title="Link to this heading">¶</a></h3>
+<p>Dla systemu PostgreSQL wybrano mechanizm wbudowany w graficzne środowisko zarządzania <strong>pgAdmin</strong>. Narzędzie <em>Import/Export Data</em> stanowi interfejs graficzny dla wysoce wydajnej komendy SQL <code class="docutils literal notranslate"><span class="pre">COPY</span></code>.</p>
+<p><strong>Uzasadnienie wyboru:</strong> Decyzja o wykorzystaniu natywnych narzędzi klienckich (wykonywanie skryptów w Query Tool oraz wbudowany mechanizm importu) wynika z potrzeby zachowania maksymalnej wydajności i bezpośredniej kontroli nad silnikiem bazy danych. Wykorzystanie Query Tool w połączeniu z bezpośrednim importem minimalizuje ścieżkę przetwarzania danych, eliminuje narzut komunikacyjny aplikacji i stanowi najbardziej optymalną, niskopoziomową metodę jednorazowego, wsadowego zasilenia struktur testowych, gwarantującą natychmiastową walidację więzów integralności przez sam serwer PostgreSQL.</p>
+</section>
+<section id="sqlite-skrypt-python-biblioteka-pandas">
+<h3><span class="section-number">4.2.2. </span>SQLite: Skrypt Python (biblioteka Pandas)<a class="headerlink" href="#sqlite-skrypt-python-biblioteka-pandas" title="Link to this heading">¶</a></h3>
+<p>W przypadku SQLite zdecydowano się na podejście programistyczne, wykorzystując język Python oraz bibliotekę do analizy danych <strong>Pandas</strong> w połączeniu z wbudowanym modułem <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code>.</p>
+<p><strong>Uzasadnienie wyboru:</strong>
+Baza SQLite jest bazą plikową, co sprawia, że skryptowanie operacji z wykorzystaniem Pythona jest wyjątkowo proste i umożliwia łatwą automatyzację. Biblioteka Pandas pozwala na bezproblemowe wczytanie plików CSV jako ramek danych za pomocą funkcji <code class="docutils literal notranslate"><span class="pre">pd.read_csv</span></code>, a następnie automatyczne zrzucenie ich do tabel w bazie danych za pomocą metody <code class="docutils literal notranslate"><span class="pre">to_sql</span></code>.</p>
+<p>Poniżej przedstawiono fragment skryptu wykorzystanego do zasilenia bazy SQLite:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">sqlite3</span>
+
+<span class="c1"># Wczytanie i import danych dla tabeli &#39;klient&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;klient_fill.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;wypozyczalnia.db&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s2">&quot;klient&quot;</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s2">&quot;append&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># Wczytanie i import danych dla tabeli &#39;wypozyczenia&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;wypozyczenia_fill.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;wypozyczalnia.db&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="s2">&quot;wypozyczenia&quot;</span><span class="p">,</span> <span class="n">conn</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s2">&quot;append&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># Wczytanie danych dla tabeli &#39;stan_techniczny&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;stan_techniczny_fill.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="c1"># (...) kontynuacja zapisu analogicznie do poprzednich tabel</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="komentarz-do-procesu-wprowadzania-danych">
+<h2><span class="section-number">4.3. </span>Komentarz do procesu wprowadzania danych<a class="headerlink" href="#komentarz-do-procesu-wprowadzania-danych" title="Link to this heading">¶</a></h2>
+<p>Proces zasilania bazy danych danymi ujawnił kilka kluczowych aspektów technicznych, które wymagały kontroli:</p>
+<ol class="arabic simple">
+<li><p><strong>Zarządzanie kluczami obcymi:</strong> Proces importu musiał przebiegać w ściśle określonej kolejności, aby nie naruszyć więzów integralności referencyjnej. Jako pierwsze do bazy musiały trafić tabele „niezależne”, czyli słownikowe: <code class="docutils literal notranslate"><span class="pre">klient</span></code> oraz <code class="docutils literal notranslate"><span class="pre">pojazdy</span></code>. Dopiero po zaindeksowaniu klientów i aut możliwe było importowanie rekordów do tabel podrzędnych: <code class="docutils literal notranslate"><span class="pre">wypozyczenia</span></code> oraz <code class="docutils literal notranslate"><span class="pre">stan_techniczny</span></code>. Próba odwrócenia tej kolejności skutkowałaby odrzuceniem importu przez silnik bazy z powodu braku powiązanych kluczy głównych.</p></li>
+<li><p><strong>Formatowanie plików źródłowych:</strong> Zastosowanie średnika (<code class="docutils literal notranslate"><span class="pre">;</span></code>) jako separatora w plikach CSV jest dobrą praktyką w polskim środowisku lokalnym, gdzie przecinek często wykorzystywany jest jako separator miejsc dziesiętnych, co mogłoby prowadzić do konfliktów przy wczytywaniu danych numerycznych. Zdefiniowano również argument <code class="docutils literal notranslate"><span class="pre">if_exists=&quot;append&quot;</span></code> w skrypcie Pythona, co gwarantowało dopisywanie danych do utworzonych wcześniej struktur (zgodnie z rygorystycznym DDL), zamiast ich nadpisywania.</p></li>
+<li><p><strong>Kodowanie znaków:</strong> Podczas pracy ze skryptami zaobserwowano problemy z kodowaniem polskich znaków diakrytycznych w nazwach plików oraz samych danych źródłowych. Nazwa pliku <code class="docutils literal notranslate"><span class="pre">wypozyczenia_fill.csv</span></code> jednoznacznie wskazuje na konflikt między kodowaniem Windows-1250 a standardem UTF-8. W docelowym środowisku produkcyjnym i przy kolejnych importach konieczne jest wymuszenie spójnego standardu, najlepiej UTF-8, zarówno dla zawartości plików CSV, jak i ich nazw, aby uniknąć problemów z odczytem danych.</p></li>
+</ol>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Sprawozdanie Bazy Danych</a></h1>
+
+
+
+
+
+
+
+
+<h3>Nawigacja</h3>
+<p class="caption" role="heading"><span class="caption-text">Spis Treści:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../rozdzial_1/index.html">1. Wprowadzenie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rozdzial_2/index.html">2. Badania literaturowe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rozdzial_3/index.html">3. Planowanie baz danych i tworzenie dokumentacji</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Definiowanie bazy danych i wprowadzanie danych do bazy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#definiowanie-bazy-danych">4.1. Definiowanie bazy danych</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wybor-mechanizmow-wsadowego-wprowadzania-danych">4.2. Wybór mechanizmów wsadowego wprowadzania danych</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#komentarz-do-procesu-wprowadzania-danych">4.3. Komentarz do procesu wprowadzania danych</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rozdzial_5/index.html">5. Zapytania do bazy danych</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../rozdzial_3/index.html" title="poprzedni rozdział"><span class="section-number">3. </span>Planowanie baz danych i tworzenie dokumentacji</a></li>
+      <li>Next: <a href="../rozdzial_5/index.html" title="następny rozdział"><span class="section-number">5. </span>Zapytania do bazy danych</a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Szybkie wyszukiwanie</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Szukaj" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Kamil Karaś.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../_sources/rozdzial_4/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

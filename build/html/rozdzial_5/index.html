@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="pl" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>5. Zapytania do bazy danych &#8212; Sprawozdanie Bazy Danych 0.0.1 - dokumentacja</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=12dfc556" />
+    <script src="../_static/documentation_options.js?v=15e49708"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/translations.js?v=4c397337"></script>
+    <link rel="index" title="Indeks" href="../genindex.html" />
+    <link rel="search" title="Szukaj" href="../search.html" />
+    <link rel="prev" title="4. Definiowanie bazy danych i wprowadzanie danych do bazy" href="../rozdzial_4/index.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="zapytania-do-bazy-danych">
+<h1><span class="section-number">5. </span>Zapytania do bazy danych<a class="headerlink" href="#zapytania-do-bazy-danych" title="Link to this heading">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Autorzy<span class="colon">:</span></dt>
+<dd class="field-odd"><ol class="arabic simple">
+<li><p>Wiktor Głogowski</p></li>
+<li><p>Olga Grześkowiak</p></li>
+<li><p>Kamil Karaś</p></li>
+</ol>
+</dd>
+</dl>
+<p>W tym rozdziale przedstawiono implementacje funkcji realizujacych zapytania
+analityczne i strukturalne do baz danych SQLite oraz PostgreSQL.</p>
+<section id="lokalizacja-modulu">
+<h2><span class="section-number">5.1. </span>Lokalizacja modulu<a class="headerlink" href="#lokalizacja-modulu" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Link do modulu python: <cite>https://github.com/karaskamil/modul_python`</cite></p></li>
+</ul>
+</section>
+<section id="automatyczna-dokumentacja-kodu-api">
+<h2><span class="section-number">5.2. </span>Automatyczna dokumentacja kodu (API)<a class="headerlink" href="#automatyczna-dokumentacja-kodu-api" title="Link to this heading">¶</a></h2>
+<p>Ponizsza sekcja zostala automatycznie wygenerowana przez narzedzie Sphinx
+bezposrednio z komentarzy zawartych w pliku zródlowym Pythona.</p>
+<p id="module-db_queries">Moduł realizujący zaawansowane zapytania do baz danych SQLite oraz PostgreSQL.
+Zawiera dedykowane funkcje operujące na tabelach systemu wypożyczalni pojazdów.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="db_queries.sqlite_get_client_summary">
+<span class="sig-prename descclassname"><span class="pre">db_queries.</span></span><span class="sig-name descname"><span class="pre">sqlite_get_client_summary</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#db_queries.sqlite_get_client_summary" title="Link to this definition">¶</a></dt>
+<dd><p>Generuje sformatowane zestawienie klientów wraz z ich miejscem zamieszkania.</p>
+<p>Wykorzystuje funkcje wierszowe (konkatenację ciągów tekstowych oraz
+funkcję UPPER) w celu ujednolicenia prezentacji danych do raportu.</p>
+<dl class="simple">
+<dt>Zadanie/Cel:</dt><dd><p>Przygotowanie danych adresowych w formacie gotowym do wydruku etykiet.</p>
+</dd>
+<dt>Argumenty:</dt><dd><p>db_path (str): Ścieżka lokalna do pliku bazy danych SQLite (<a href="#id1"><span class="problematic" id="id2">*</span></a>.db).</p>
+</dd>
+<dt>Zwraca:</dt><dd><p>List[Tuple[str, str]]: Lista krotek zawierających (pelne_nazwisko, adres_poczty),
+gdzie nazwisko jest pisane wielkimi literami.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db_queries.sqlite_get_popular_drive_types">
+<span class="sig-prename descclassname"><span class="pre">db_queries.</span></span><span class="sig-name descname"><span class="pre">sqlite_get_popular_drive_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_rentals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#db_queries.sqlite_get_popular_drive_types" title="Link to this definition">¶</a></dt>
+<dd><p>Analizuje popularność typów napędów pojazdów na podstawie liczby wypożyczeń.</p>
+<p>Wykorzystuje funkcje agregujące (COUNT), złączenia wielotabelowe (JOIN)
+oraz klauzulę agregacji grupowej z filtrowaniem (GROUP BY … HAVING).</p>
+<dl class="simple">
+<dt>Zadanie/Cel:</dt><dd><p>Optymalizacja zakupów nowej floty poprzez identyfikację najchętniej
+wybieranych rodzajów napędów.</p>
+</dd>
+<dt>Argumenty:</dt><dd><p>db_path (str): Ścieżka lokalna do pliku bazy danych SQLite.
+min_rentals (int): Minimalny próg liczby wypożyczeń kwalifikujący grupę.</p>
+</dd>
+<dt>Zwraca:</dt><dd><p>List[Tuple[str, int]]: Pary zawierające nazwę napędu oraz sumaryczną liczbę najmów.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db_queries.sqlite_get_all_active_and_historical_ids">
+<span class="sig-prename descclassname"><span class="pre">db_queries.</span></span><span class="sig-name descname"><span class="pre">sqlite_get_all_active_and_historical_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#db_queries.sqlite_get_all_active_and_historical_ids" title="Link to this definition">¶</a></dt>
+<dd><p>Konsoliduje unikalne identyfikatory pojazdów z różnych etapów cyklu życia.</p>
+<p>Wykorzystuje operator zbiorowy (UNION) do połączenia zbiorów identyfikatorów
+z tabeli bieżącego stanu technicznego oraz historycznego rejestru wypożyczeń.</p>
+<dl class="simple">
+<dt>Zadanie/Cel:</dt><dd><p>Weryfikacja spójności danych i wykrywanie pojazdów niewypożyczonych ani razu w bazie.</p>
+</dd>
+<dt>Argumenty:</dt><dd><p>db_path (str): Ścieżka lokalna do pliku bazy danych SQLite.</p>
+</dd>
+<dt>Zwraca:</dt><dd><p>List[Tuple[str, str]]: Zbiór krotek (pojazdId, zrodlo_danych) bez duplikatów.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db_queries.sqlite_get_vehicles_above_average_mileage">
+<span class="sig-prename descclassname"><span class="pre">db_queries.</span></span><span class="sig-name descname"><span class="pre">sqlite_get_vehicles_above_average_mileage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#db_queries.sqlite_get_vehicles_above_average_mileage" title="Link to this definition">¶</a></dt>
+<dd><p>Wyszukuje pojazdy, których przebieg przewyższa średnią.</p>
+<p>Wykorzystuje podzapytanie nieskorelowane w klauzuli WHERE do dynamicznego
+obliczenia średniej wartości przebiegu.</p>
+<dl class="simple">
+<dt>Zadanie/Cel:</dt><dd><p>Wytypowanie samochodów do priorytetowego przeglądu okresowego lub sprzedaży.</p>
+</dd>
+<dt>Argumenty:</dt><dd><p>db_path (str): Ścieżka lokalna do pliku bazy danych SQLite.</p>
+</dd>
+<dt>Zwraca:</dt><dd><p>List[Tuple[str, str, int]]: Lista pojazdów (pojazdId, rejestracja, przebieg).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db_queries.sqlite_get_clients_with_multiple_rentals">
+<span class="sig-prename descclassname"><span class="pre">db_queries.</span></span><span class="sig-name descname"><span class="pre">sqlite_get_clients_with_multiple_rentals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#db_queries.sqlite_get_clients_with_multiple_rentals" title="Link to this definition">¶</a></dt>
+<dd><p>Wyszukuje stałych klientów przy użyciu zaawansowanego podzapytania skorelowanego.</p>
+<p>Podzapytanie w klauzuli WHERE odwołuje się do zewnętrznego rekordu klienta,
+zliczając jego indywidualne operacje w tabeli wypożyczeń.</p>
+<dl class="simple">
+<dt>Zadanie/Cel:</dt><dd><p>Identyfikacja partnerów biznesowych kwalifikujących się do rabatów lojalnościowych.</p>
+</dd>
+<dt>Argumenty:</dt><dd><p>db_path (str): Ścieżka lokalna do pliku bazy danych SQLite.</p>
+</dd>
+<dt>Zwraca:</dt><dd><p>List[Tuple[str, str, int]]: Dane klientów (imie, nazwisko, łączna_liczba_wypożyczeń).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db_queries.pg_get_expired_inspections">
+<span class="sig-prename descclassname"><span class="pre">db_queries.</span></span><span class="sig-name descname"><span class="pre">pg_get_expired_inspections</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#db_queries.pg_get_expired_inspections" title="Link to this definition">¶</a></dt>
+<dd><p>Pobiera listę pojazdów, których termin przeglądu technicznego minął.</p>
+<p>Wykorzystuje funkcje wierszowe PostgreSQL do operacji na datach (CURRENT_DATE)
+oraz obliczania interwałów czasowych (wiek wpisu / różnica dni).</p>
+<dl class="simple">
+<dt>Zadanie/Cel:</dt><dd><p>Zapewnienie bezpieczeństwa prawnego poprzez niedopuszczenie do ruchu
+samochodów bez ważnych badań.</p>
+</dd>
+<dt>Argumenty:</dt><dd><p>db_config (dict): Słownik konfiguracyjny połączenia (host, dbname, user, password, port).</p>
+</dd>
+<dt>Zwraca:</dt><dd><p>List[Tuple[Any, …]]: Dane (pojazdId, rejestracja, opoznienie_w_dniach).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db_queries.pg_get_financial_payment_report">
+<span class="sig-prename descclassname"><span class="pre">db_queries.</span></span><span class="sig-name descname"><span class="pre">pg_get_financial_payment_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#db_queries.pg_get_financial_payment_report" title="Link to this definition">¶</a></dt>
+<dd><p>Generuje raport księgowy dotyczący form płatności i ich popularności.</p>
+<p>Implementuje funkcje agregujące (COUNT) wraz z grupowaniem, sortowaniem
+oraz wielopoziomowym łączeniem danych.</p>
+<dl class="simple">
+<dt>Zadanie/Cel:</dt><dd><p>Analiza preferencji płatniczych klientów w celach optymalizacji prowizji bankowych.</p>
+</dd>
+<dt>Argumenty:</dt><dd><p>db_config (dict): Słownik konfiguracyjny połączenia PostgreSQL.</p>
+</dd>
+<dt>Zwraca:</dt><dd><p>List[Tuple[Any, …]]: Statystyki (platnosc, liczba_transakcji).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db_queries.pg_get_system_chronology_report">
+<span class="sig-prename descclassname"><span class="pre">db_queries.</span></span><span class="sig-name descname"><span class="pre">pg_get_system_chronology_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#db_queries.pg_get_system_chronology_report" title="Link to this definition">¶</a></dt>
+<dd><p>Generuje chronologiczny rejestr zdarzeń operacyjnych w systemie (oś czasu).</p>
+<p>Wykorzystuje operator UNION do skonsolidowania informacji o datach zawarcia
+umów wypożyczeń (wraz z formą płatności) oraz datach wykonanych przeglądów
+technicznych z tabeli stan_techniczny.</p>
+<dl class="simple">
+<dt>Zadanie/Cel:</dt><dd><p>Prezentacja globalnej linii czasu działań firmy na jednym raporcie.</p>
+</dd>
+<dt>Argumenty:</dt><dd><p>db_config (dict): Słownik konfiguracyjny połączenia PostgreSQL.</p>
+</dd>
+<dt>Zwraca:</dt><dd><p>List[Tuple[str, str, str]]: Rekordy w formacie (data_zdarzenia, typ_zdarzenia, opis).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db_queries.pg_get_vehicles_never_rented">
+<span class="sig-prename descclassname"><span class="pre">db_queries.</span></span><span class="sig-name descname"><span class="pre">pg_get_vehicles_never_rented</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#db_queries.pg_get_vehicles_never_rented" title="Link to this definition">¶</a></dt>
+<dd><p>Wyszukuje pojazdy widniejące w kartotece, które nigdy nie zostały wypożyczone.</p>
+<p>Wykorzystuje podzapytanie nieskorelowane (operator NOT IN) do wykluczenia
+pojazdów przypisanych do jakiegokolwiek kontraktu.</p>
+<dl class="simple">
+<dt>Zadanie/Cel:</dt><dd><p>Wykrywanie martwych zasobów generujących koszty stałe bez przychodu.</p>
+</dd>
+<dt>Argumenty:</dt><dd><p>db_config (dict): Słownik konfiguracyjny połączenia PostgreSQL.</p>
+</dd>
+<dt>Zwraca:</dt><dd><p>List[Tuple[Any, …]]: Wykaz pojazdów (pojazdId, rejestracja, silnik).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="db_queries.pg_get_faulty_vehicles_report">
+<span class="sig-prename descclassname"><span class="pre">db_queries.</span></span><span class="sig-name descname"><span class="pre">pg_get_faulty_vehicles_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#db_queries.pg_get_faulty_vehicles_report" title="Link to this definition">¶</a></dt>
+<dd><p>Zwraca szczegółowe opisy uszkodzeń floty bazując na zaawansowanym podzapytaniu.</p>
+<p>Wykorzystuje podzapytanie skorelowane (klauzula EXISTS) sprawdzające, czy dla danego
+pojazdu istnieją krytyczne wpisy o braku sprawności w tabeli stanu technicznego.</p>
+<dl class="simple">
+<dt>Zadanie/Cel:</dt><dd><p>Przekazanie raportu uszkodzeń mechanikom serwisowym.</p>
+</dd>
+<dt>Argumenty:</dt><dd><p>db_config (dict): Słownik konfiguracyjny połączenia PostgreSQL.</p>
+</dd>
+<dt>Zwraca:</dt><dd><p>List[Tuple[Any, …]]: Lista (rejestracja, zarysowania_lub_usterki).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Sprawozdanie Bazy Danych</a></h1>
+
+
+
+
+
+
+
+
+<h3>Nawigacja</h3>
+<p class="caption" role="heading"><span class="caption-text">Spis Treści:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../rozdzial_1/index.html">1. Wprowadzenie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rozdzial_2/index.html">2. Badania literaturowe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rozdzial_3/index.html">3. Planowanie baz danych i tworzenie dokumentacji</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rozdzial_4/index.html">4. Definiowanie bazy danych i wprowadzanie danych do bazy</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Zapytania do bazy danych</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lokalizacja-modulu">5.1. Lokalizacja modulu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#automatyczna-dokumentacja-kodu-api">5.2. Automatyczna dokumentacja kodu (API)</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../rozdzial_4/index.html" title="poprzedni rozdział"><span class="section-number">4. </span>Definiowanie bazy danych i wprowadzanie danych do bazy</a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Szybkie wyszukiwanie</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Szukaj" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2026, Kamil Karaś.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../_sources/rozdzial_5/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
