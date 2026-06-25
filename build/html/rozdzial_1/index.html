@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1. Wprowadzenie &#8212; Sprawozdanie Bazy Danych 0.0.1 - dokumentacja</title>
+    <title>1. Wprowadzenie &#8212; Sprawozdanie Bazy Danych 1.0 - dokumentacja</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
     <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=12dfc556" />
-    <script src="../_static/documentation_options.js?v=15e49708"></script>
+    <script src="../_static/documentation_options.js?v=331e28ce"></script>
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=4c397337"></script>
@@ -35,6 +35,41 @@
             
   <section id="wprowadzenie">
 <h1><span class="section-number">1. </span>Wprowadzenie<a class="headerlink" href="#wprowadzenie" title="Link to this heading">¶</a></h1>
+<p>Niniejsze sprawozdanie zostało przygotowane w ramach zajęć laboratoryjnych z zakresu projektowania, implementacji oraz administracji bazami danych. Celem realizowanych ćwiczeń było zdobycie praktycznych umiejętności związanych z tworzeniem modeli danych, definiowaniem struktur bazodanowych, wykonywaniem zapytań SQL oraz obsługą systemów zarządzania bazami danych PostgreSQL i SQLite. Istotnym elementem zajęć było również poznanie metod komunikacji aplikacji z bazą danych przy wykorzystaniu języka Python oraz odpowiednich bibliotek programistycznych.</p>
+<section id="wykorzystane-repozytoria">
+<h2><span class="section-number">1.1. </span>Wykorzystane repozytoria<a class="headerlink" href="#wykorzystane-repozytoria" title="Link to this heading">¶</a></h2>
+<p>Pliki źródłowe sprawozdania</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/karaskamil/Sprawozdanie-Bazy-Danych">https://github.com/karaskamil/Sprawozdanie-Bazy-Danych</a></p></li>
+</ul>
+<p>Badania literaturowe</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/karaskamil/Sprzet-dla-bazy-danych.git">https://github.com/karaskamil/Sprzet-dla-bazy-danych.git</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Youarecheck/Bazy_Danych_Tematyczne_Repo_MK.git">https://github.com/Youarecheck/Bazy_Danych_Tematyczne_Repo_MK.git</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pawlos1337/Bazy-danych-temat.git">https://github.com/pawlos1337/Bazy-danych-temat.git</a></p></li>
+<li><p><a class="reference external" href="https://github.com/OskarProgrammer/monitorowanie_i_diagnostyka.git">https://github.com/OskarProgrammer/monitorowanie_i_diagnostyka.git</a></p></li>
+<li><p><a class="reference external" href="https://github.com/KMachoK/Tematyczne.git">https://github.com/KMachoK/Tematyczne.git</a></p></li>
+<li><p><a class="reference external" href="https://github.com/domino0472/Partycjonowani-Danych">https://github.com/domino0472/Partycjonowani-Danych</a></p></li>
+<li><p><a class="reference external" href="https://github.com/oski486/BazyDanych-Subject.git">https://github.com/oski486/BazyDanych-Subject.git</a></p></li>
+<li><p><a class="reference external" href="https://github.com/Koko9077/Kopie-zapasowe-i-odzyskiwanie-danych.git">https://github.com/Koko9077/Kopie-zapasowe-i-odzyskiwanie-danych.git</a></p></li>
+</ul>
+<p>Publiczne repozytoria wykorzystane do ćwiczeń laboratoryjnych</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs">https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs</a></p></li>
+</ul>
+</section>
+<section id="przebieg-laboratoriow">
+<h2><span class="section-number">1.2. </span>Przebieg Laboratoriów<a class="headerlink" href="#przebieg-laboratoriow" title="Link to this heading">¶</a></h2>
+<p>Podczas ćwiczeń laboratoryjnych wykonywano zadania obejmujące nawiązywanie połączeń z bazami danych przy użyciu Pythonowych bibliotek SQLite3 oraz Psycopg, wykorzystanie plików konfiguracyjnych JSON przechowujących dane uwierzytelniające, a także realizację wsadowego wprowadzania danych do baz danych. W środowisku pgAdmin przeprowadzano bardziej zaawansowane operacje na demonstracyjnej bazie Northwind, obejmujące selekcję danych, sortowanie wyników, grupowanie rekordów, wykorzystanie funkcji agregujących, wykonywanie złączeń pomiędzy tabelami oraz stosowanie funkcji wierszowych. Dodatkowo realizowano ćwiczenia związane z pracą na zdalnym serwerze Linux poprzez połączenie SSH przy użyciu programu PuTTY oraz wykonywanie poleceń SQL za pomocą narzędzia <code class="docutils literal notranslate"><span class="pre">psql</span></code>.</p>
+<p>Przedstawiony w raporcie projekt obejmuje również proces planowania i dokumentowania bazy danych, począwszy od opracowania modelu konceptualnego, poprzez model logiczny uwzględniający zasady normalizacji, aż do przygotowania modelu fizycznego oraz implementacji struktury bazy danych. Następnie zaprezentowano proces definiowania tabel, wprowadzania danych oraz przygotowania przykładowych zapytań realizujących wymagane operacje na zgromadzonych danych.</p>
+</section>
+<section id="wnioski-z-przeprowadzonych-cwiczen-i-eksperymentow">
+<h2><span class="section-number">1.3. </span>Wnioski z przeprowadzonych ćwiczeń i eksperymentów<a class="headerlink" href="#wnioski-z-przeprowadzonych-cwiczen-i-eksperymentow" title="Link to this heading">¶</a></h2>
+<p>Przeprowadzone ćwiczenia laboratoryjne pozwoliły na zdobycie praktycznego doświadczenia w pracy z relacyjnymi bazami danych oraz systemem PostgreSQL. Szczególnie istotne okazało się zrozumienie procesu projektowania bazy danych, ponieważ poprawnie przygotowany model konceptualny i logiczny znacząco ułatwia późniejszą implementację oraz rozwój systemu.</p>
+<p>Ćwiczenia wykazały również, że efektywne wykorzystanie języka SQL umożliwia realizację złożonych operacji analitycznych przy stosunkowo niewielkiej liczbie poleceń. Zastosowanie złączeń, grupowania oraz funkcji agregujących pozwala na szybkie pozyskiwanie informacji z dużych zbiorów danych. Praktyczna praca z bazą Northwind umożliwiła sprawdzenie działania tych mechanizmów na rzeczywistych i rozbudowanych strukturach danych.</p>
+<p>Dodatkowo potwierdzono przydatność narzędzi programistycznych takich jak Jupyter Notebook, Psycopg oraz SQLite3 w procesie integracji aplikacji z bazą danych. Wykorzystanie wsadowego wprowadzania danych pozwala znacząco zwiększyć wydajność operacji importu, natomiast przechowywanie parametrów połączenia w plikach konfiguracyjnych poprawia organizację projektu i bezpieczeństwo aplikacji.</p>
+<p>Realizacja wszystkich ćwiczeń pozwoliła na zdobycie wiedzy obejmującej zarówno aspekty projektowe, jak i praktyczne wykorzystanie systemów baz danych, co stanowi podstawę do tworzenia bardziej zaawansowanych aplikacji korzystających z relacyjnych baz danych.</p>
+</section>
 </section>
 
 
@@ -56,7 +91,12 @@
 <h3>Nawigacja</h3>
 <p class="caption" role="heading"><span class="caption-text">Spis Treści:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Wprowadzenie</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Wprowadzenie</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#wykorzystane-repozytoria">1.1. Wykorzystane repozytoria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#przebieg-laboratoriow">1.2. Przebieg Laboratoriów</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wnioski-z-przeprowadzonych-cwiczen-i-eksperymentow">1.3. Wnioski z przeprowadzonych ćwiczeń i eksperymentów</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../rozdzial_2/index.html">2. Badania literaturowe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rozdzial_3/index.html">3. Planowanie baz danych i tworzenie dokumentacji</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rozdzial_4/index.html">4. Definiowanie bazy danych i wprowadzanie danych do bazy</a></li>

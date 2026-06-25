@@ -3,7 +3,8 @@ Sprawozdanie z Laboratorium Baz Danych
 =====================================================
 
 .. Opis projektu na stronie głównej
-Niniejsze sprawozdanie zawiera kompletną dokumentację zrealizowanych zadań laboratoryjnych,
+
+Niniejsze sprawozdanie zawiera kompletną dokumentację zrealizowanych badań literaturowych oraz zadań laboratoryjnych,
 włączając w to strukturę bazy danych, implementacje zapytań SQL oraz automatyczną dokumentację kodu.
 
 .. Główny spis treści

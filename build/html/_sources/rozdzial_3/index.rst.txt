@@ -3,9 +3,11 @@ Planowanie baz danych i tworzenie dokumentacji
 ==============================================
 
 :Autorzy:
-    1. Wiktor Głogowski
-    2. Olga Grześkowiak
-    3. Kamil Karaś
+
+    #. Wiktor Głogowski
+    #. Olga Grześkowiak
+    #. Kamil Karaś
+
 
 Model Konceptualny
 ==================
