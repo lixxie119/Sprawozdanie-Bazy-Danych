@@ -9,15 +9,15 @@ Spis użytych repozytoriów
 
 W trakcie realizacji projektu wykorzystano następujące repozytoria na platformie Github:
 
-* **Projektowe grupowe:** `https://github.com/karaskamil/Sprawozdanie-Bazy-Danych` — zawierające zebrane wszystkie repozytoria z badaniami literaturowymi oraz grupowo pisane rozdziały raportu.
-* **Badania literaturowe - sprzęt dla baz danych:** `https://github.com/karaskamil/Sprzet-dla-bazy-danych.git` — zawierające pierwszy podrozdział badań literaturowych.
-* **Badania literaturowe - konfiguracja bazy danych:** `https://github.com/Youarecheck/Bazy_Danych_Tematyczne_Repo_MK.git` — zawierające drugi podrozdział badań literaturowych.
+* **Grupowe repozytorium z plikami projektowymi:** `https://github.com/karaskamil/Sprawozdanie-Bazy-Danych` - zawierające zebrane wszystkie repozytoria z badaniami literaturowymi oraz grupowo pisane rozdziały raportu.
+* **Badania literaturowe - sprzęt dla baz danych:** `https://github.com/karaskamil/Sprzet-dla-bazy-danych.git` - zawierające pierwszy podrozdział badań literaturowych.
+* **Badania literaturowe - konfiguracja bazy danych:** `https://github.com/Youarecheck/Bazy_Danych_Tematyczne_Repo_MK.git` - zawierające drugi podrozdział badań literaturowych.
 * **Badania literaturowe - kontrola i konserwacja:** `https://github.com/pawlos1337/Bazy-danych-temat.git` — zawierające trzeci podrozdział badań literaturowych.
-* **Badania literaturowe - monitorowanie i diagnostyka:** `https://github.com/OskarProgrammer/monitorowanie_i_diagnostyka.git` — zawierające czwarty podrozdział badań literaturowych.
-* **Badania literaturowe - wydajność, skalowanie i replikacja:** `https://github.com/KMachoK/Tematyczne/blob/main/index.rst` — zawierające piąty podrozdział badań literaturowych.
-* **Badania literaturowe - partycjonowanie danych:** `https://github.com/domino0472/Partycjonowani-Danych` — zawierające szósty podrozdział badań literaturowych.
-* **Badania literaturowe - bezpieczeństwo:** `https://github.com/oski486/BazyDanych-Subject.git` — zawierające siódmy podrozdział badań literaturowych.
-* **Badania literaturowe - kopie zapasowe i odzyskiwanie danych:** `https://github.com/Koko9077/Kopie-zapasowe-i-odzyskiwanie-danych.git` — zawierające ósmy podrozdział badań literaturowych.
+* **Badania literaturowe - monitorowanie i diagnostyka:** `https://github.com/OskarProgrammer/monitorowanie_i_diagnostyka.git` - zawierające czwarty podrozdział badań literaturowych.
+* **Badania literaturowe - wydajność, skalowanie i replikacja:** `https://github.com/KMachoK/Tematyczne/blob/main/index.rst` - zawierające piąty podrozdział badań literaturowych.
+* **Badania literaturowe - partycjonowanie danych:** `https://github.com/domino0472/Partycjonowani-Danych` - zawierające szósty podrozdział badań literaturowych.
+* **Badania literaturowe - bezpieczeństwo:** `https://github.com/oski486/BazyDanych-Subject.git` - zawierające siódmy podrozdział badań literaturowych.
+* **Badania literaturowe - kopie zapasowe i odzyskiwanie danych:** `https://github.com/Koko9077/Kopie-zapasowe-i-odzyskiwanie-danych.git` - zawierające ósmy podrozdział badań literaturowych.
 
 Wprowadzenie tematyczne do ćwiczeń i eksperymentów
 ==================================================
