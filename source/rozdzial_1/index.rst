@@ -2,44 +2,51 @@
 Wprowadzenie
 ============
 
-Niniejsze sprawozdanie zostało przygotowane w ramach zajęć laboratoryjnych z zakresu projektowania, implementacji oraz administracji bazami danych. Celem realizowanych ćwiczeń było zdobycie praktycznych umiejętności związanych z tworzeniem modeli danych, definiowaniem struktur bazodanowych, wykonywaniem zapytań SQL oraz obsługą systemów zarządzania bazami danych PostgreSQL i SQLite. Istotnym elementem zajęć było również poznanie metod komunikacji aplikacji z bazą danych przy wykorzystaniu języka Python oraz odpowiednich bibliotek programistycznych.
+Niniejszy raport stanowi podsumowanie zagadnień realizowanych w ramach zajęć laboratoryjnych z przedmiotu bazy danych. Dokument omawia narzędzia, techniki projektowe oraz metody zasilania i odpytywania struktur relacyjnych. Kluczowym elementem opracowania jest analiza porównawcza dwóch systemów zarządzania bazami danych (DBMS): zaawansowanego, serwerowego rozwiązania **PostgreSQL** oraz lekkiej, bezserwerowej bazy **SQLite**. Praca uwzględnia pełną ścieżkę tworzenia baz danynch — od modelowania, aż po fizyczną implementację i optymalizację zapytań SQL.
 
-Wykorzystane repozytoria
-========================
+Spis użytych repozytoriów
+=========================
 
-Pliki źródłowe sprawozdania
+W trakcie realizacji projektu wykorzystano następujące repozytoria na platformie Github:
 
-* https://github.com/karaskamil/Sprawozdanie-Bazy-Danych
+* **Projektowe grupowe:** `https://github.com/karaskamil/Sprawozdanie-Bazy-Danych` — zawierające zebrane wszystkie repozytoria z badaniami literaturowymi oraz grupowo pisane rozdziały raportu.
+* **Badania literaturowe - sprzęt dla baz danych:** `https://github.com/karaskamil/Sprzet-dla-bazy-danych.git` — zawierające pierwszy podrozdział badań literaturowych.
+* **Badania literaturowe - konfiguracja bazy danych:** `https://github.com/Youarecheck/Bazy_Danych_Tematyczne_Repo_MK.git` — zawierające drugi podrozdział badań literaturowych.
+* **Badania literaturowe - kontrola i konserwacja:** `https://github.com/pawlos1337/Bazy-danych-temat.git` — zawierające trzeci podrozdział badań literaturowych.
+* **Badania literaturowe - monitorowanie i diagnostyka:** `https://github.com/OskarProgrammer/monitorowanie_i_diagnostyka.git` — zawierające czwarty podrozdział badań literaturowych.
+* **Badania literaturowe - wydajność, skalowanie i replikacja:** `https://github.com/KMachoK/Tematyczne/blob/main/index.rst` — zawierające piąty podrozdział badań literaturowych.
+* **Badania literaturowe - partycjonowanie danych:** `https://github.com/domino0472/Partycjonowani-Danych` — zawierające szósty podrozdział badań literaturowych.
+* **Badania literaturowe - bezpieczeństwo:** `https://github.com/oski486/BazyDanych-Subject.git` — zawierające siódmy podrozdział badań literaturowych.
+* **Badania literaturowe - kopie zapasowe i odzyskiwanie danych:** `https://github.com/Koko9077/Kopie-zapasowe-i-odzyskiwanie-danych.git` — zawierające ósmy podrozdział badań literaturowych.
 
-Badania literaturowe
+Wprowadzenie tematyczne do ćwiczeń i eksperymentów
+==================================================
 
-* https://github.com/karaskamil/Sprzet-dla-bazy-danych.git
-* https://github.com/Youarecheck/Bazy_Danych_Tematyczne_Repo_MK.git
-* https://github.com/pawlos1337/Bazy-danych-temat.git
-* https://github.com/OskarProgrammer/monitorowanie_i_diagnostyka.git
-* https://github.com/KMachoK/Tematyczne.git
-* https://github.com/domino0472/Partycjonowani-Danych
-* https://github.com/oski486/BazyDanych-Subject.git
-* https://github.com/Koko9077/Kopie-zapasowe-i-odzyskiwanie-danych.git
+Celem przeprowadzonych zajęć laboratoryjnych było zapoznanie z projektowaniem i wdrożeniem baz danych. W zadaniach laboratoryjnych, wykonaliśmy relacyjną bazę danych wspomagającą zarządzanie systemem wypożyczalni samochodów. Eksperymenty polegały na zbadaniu, jak teoretyczne założenia relacyjnego modelu danych zachowują się w dwóch  różnych środowiskach wykonawczych.
 
-Publiczne repozytoria wykorzystane do ćwiczeń laboratoryjnych
+W ramach zadań laboratoryjnych przeprowadzono kolejne kroki:
+1. Opracowanie badań literaturowych:** Podstawa teoretyczna do dalszych zadań, w przypadku naszej grupy opracowany został temat sprzęt dla baz danych.
+2. **Modelowanie i normalizacja:** Stworzenie modelu konceptualnego, logicznego z normalizacją oraz fizycznego dla konkretnej bazy danych (wypożyczalnia).
+3. **Migracja i mechanizmy wsadowe:** Porównanie wydajności i elastyczności graficznego importu przez narzędzia pgAdmin (wykorzystujące komendę ``COPY``) z programistycznym ładowaniem danych przy użyciu biblioteki Pandas w Pythonie.
+4. **Analityka SQL:** Konstruowanie złożonych kwerend filtrujących, grupujących oraz łączących dane w celu wyciągnięcia kluczowych wskaźników efektywności (KPI) dla przedsiębiorstwa, zarówno dla PostgreSQL, jak i SQLite.
 
-* https://github.com/microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs
+Struktura raportu
+=================
 
-Przebieg Laboratoriów
-======================
+Opracowanie zostało podzielone na następujące rozdziały:
 
-Podczas ćwiczeń laboratoryjnych wykonywano zadania obejmujące nawiązywanie połączeń z bazami danych przy użyciu Pythonowych bibliotek SQLite3 oraz Psycopg, wykorzystanie plików konfiguracyjnych JSON przechowujących dane uwierzytelniające, a także realizację wsadowego wprowadzania danych do baz danych. W środowisku pgAdmin przeprowadzano bardziej zaawansowane operacje na demonstracyjnej bazie Northwind, obejmujące selekcję danych, sortowanie wyników, grupowanie rekordów, wykorzystanie funkcji agregujących, wykonywanie złączeń pomiędzy tabelami oraz stosowanie funkcji wierszowych. Dodatkowo realizowano ćwiczenia związane z pracą na zdalnym serwerze Linux poprzez połączenie SSH przy użyciu programu PuTTY oraz wykonywanie poleceń SQL za pomocą narzędzia ``psql``.
+* **Badania literaturowe:** Przedstawienie podstaw teoretycznych związanych z tworzeniem, administracją i utrzymaniem systemów bazodanowych na przykładzie architektury PostgreSQL.
+* **Planowanie baz danych i tworzenie dokumentacji:** Opis procesu modelowania konceptualnego, logicznego (z uwzględnieniem normalizacji) oraz fizycznego z podziałem na dialekty PostgreSQL i SQLite.
+* **Definiowanie bazy danych i wprowadzanie danych do bazy:** Komentarz z wykonania skryptów oraz analiza metod masowego zasilania tabel z plików CSV.
+* **Zapytania do bazy danych:** Prezentacja oraz omówienie wykonanych zapytań SQL realizujących zadania postawione w instrukcji laboratoryjnej.
 
-Przedstawiony w raporcie projekt obejmuje również proces planowania i dokumentowania bazy danych, począwszy od opracowania modelu konceptualnego, poprzez model logiczny uwzględniający zasady normalizacji, aż do przygotowania modelu fizycznego oraz implementacji struktury bazy danych. Następnie zaprezentowano proces definiowania tabel, wprowadzania danych oraz przygotowania przykładowych zapytań realizujących wymagane operacje na zgromadzonych danych.
+Wnioski z przeprowadzonych ćwiczeń
+==================================
 
-Wnioski z przeprowadzonych ćwiczeń i eksperymentów
-===================================================
+Przeprowadzone ćwiczenia dały możliwość praktycznego sprawdzenia informacji o obsłudze baz danych, a także pogłębienia zrozumienia procesu projektowania baz danych. Pokazały różnice między implementacjami SQL oraz pozwoliły na porównanie poleceń przy bardziej złożonych operacjach analitycznych. W praktyczny sposób pokazały również jak przydatna jest metoda wsadowego dodawania danych za pomocą pliku .csv.
 
-Przeprowadzone ćwiczenia laboratoryjne pozwoliły na zdobycie praktycznego doświadczenia w pracy z relacyjnymi bazami danych oraz systemem PostgreSQL. Szczególnie istotne okazało się zrozumienie procesu projektowania bazy danych, ponieważ poprawnie przygotowany model konceptualny i logiczny znacząco ułatwia późniejszą implementację oraz rozwój systemu.
+Badania laboratoryjne wykazały, że wybór systemu DBMS musi być podyktowany architekturą docelowego systemu. **PostgreSQL** oferuje bezpieczeństwo, zaawansowane mechanizmy transakcyjne i wysoką wydajność przy operacjach wielowątkowych, jednak wymaga dedykowanej administracji. Z kolei **SQLite** doskonale sprawdza się w scenariuszach lokalnych, oferując zerowy koszt konfiguracji kosztem braku zaawansowanego współbieżnego zapisu. 
 
-Ćwiczenia wykazały również, że efektywne wykorzystanie języka SQL umożliwia realizację złożonych operacji analitycznych przy stosunkowo niewielkiej liczbie poleceń. Zastosowanie złączeń, grupowania oraz funkcji agregujących pozwala na szybkie pozyskiwanie informacji z dużych zbiorów danych. Praktyczna praca z bazą Northwind umożliwiła sprawdzenie działania tych mechanizmów na rzeczywistych i rozbudowanych strukturach danych.
+Dodatkowo proces normalizacji potwierdził, że poprawne zaprojektowanie bazy danych w 3NF w fazie planowania eliminuje ryzyko wystąpienia anomalii podczas operacji modyfikacji danych i upraszcza późniejsze utrzymanie kodu aplikacji.
 
-Dodatkowo potwierdzono przydatność narzędzi programistycznych takich jak Jupyter Notebook, Psycopg oraz SQLite3 w procesie integracji aplikacji z bazą danych. Wykorzystanie wsadowego wprowadzania danych pozwala znacząco zwiększyć wydajność operacji importu, natomiast przechowywanie parametrów połączenia w plikach konfiguracyjnych poprawia organizację projektu i bezpieczeństwo aplikacji.
-
-Realizacja wszystkich ćwiczeń pozwoliła na zdobycie wiedzy obejmującej zarówno aspekty projektowe, jak i praktyczne wykorzystanie systemów baz danych, co stanowi podstawę do tworzenia bardziej zaawansowanych aplikacji korzystających z relacyjnych baz danych.
+Realizacja ćwiczeń pomogła zdobyć praktyczne informacje oraz umiejętności, które stanowią podstawę do dalszej, bardziej zaawansowanej pracy z bazami danych.
