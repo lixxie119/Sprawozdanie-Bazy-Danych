@@ -11,8 +11,8 @@ import sys
 sys.path.insert(0, os.path.abspath('.'))
 
 project = 'Sprawozdanie Bazy Danych'
-copyright = '2026, Kamil Karaś'
-author = 'Kamil Karaś'
+copyright = '2026, Olga Grześkowiak'
+author = 'Olga Grześkowiak'
 release = '1.0'
 
 # -- General configuration ---------------------------------------------------
