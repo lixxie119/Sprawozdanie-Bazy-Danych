@@ -9,16 +9,16 @@ Spis użytych repozytoriów
 
 W trakcie realizacji projektu wykorzystano następujące repozytoria na platformie Github:
 
-* **Grupowe repozytorium z plikami projektowymi:** `https://github.com/karaskamil/Sprawozdanie-Bazy-Danych` - zawierające zebrane wszystkie repozytoria z badaniami literaturowymi oraz grupowo pisane rozdziały raportu.
-* **Indywidualne repozytorium z plikami projektowymi:** `https://github.com/lixxie119/Sprawozdanie-Bazy-Danych` - w stosunku do repozytorium grupowego, dodane zostało wprowadzenie pisane indywidualnie oraz drobne poprawki stylistyczne.
-* **Badania literaturowe - sprzęt dla baz danych:** `https://github.com/karaskamil/Sprzet-dla-bazy-danych.git` - zawierające pierwszy podrozdział badań literaturowych.
-* **Badania literaturowe - konfiguracja bazy danych:** `https://github.com/Youarecheck/Bazy_Danych_Tematyczne_Repo_MK.git` - zawierające drugi podrozdział badań literaturowych.
-* **Badania literaturowe - kontrola i konserwacja:** `https://github.com/pawlos1337/Bazy-danych-temat.git` - zawierające trzeci podrozdział badań literaturowych.
-* **Badania literaturowe - monitorowanie i diagnostyka:** `https://github.com/OskarProgrammer/monitorowanie_i_diagnostyka.git` - zawierające czwarty podrozdział badań literaturowych.
-* **Badania literaturowe - wydajność, skalowanie i replikacja:** `https://github.com/KMachoK/Tematyczne/blob/main/index.rst` - zawierające piąty podrozdział badań literaturowych.
-* **Badania literaturowe - partycjonowanie danych:** `https://github.com/domino0472/Partycjonowani-Danych` - zawierające szósty podrozdział badań literaturowych.
-* **Badania literaturowe - bezpieczeństwo:** `https://github.com/oski486/BazyDanych-Subject.git` - zawierające siódmy podrozdział badań literaturowych.
-* **Badania literaturowe - kopie zapasowe i odzyskiwanie danych:** `https://github.com/Koko9077/Kopie-zapasowe-i-odzyskiwanie-danych.git` - zawierające ósmy podrozdział badań literaturowych.
+* **Grupowe repozytorium z plikami projektowymi:** `Sprawozdanie-Bazy-Danych <https://github.com/karaskamil/Sprawozdanie-Bazy-Danych>`_ - zawierające zebrane wszystkie repozytoria z badaniami literaturowymi oraz grupowo pisane rozdziały raportu.
+* **Indywidualne repozytorium z plikami projektowymi:** `Sprawozdanie-Bazy-Danych-indywidualne <https://github.com/lixxie119/Sprawozdanie-Bazy-Danych>`_ - w stosunku do repozytorium grupowego, dodane zostało wprowadzenie pisane indywidualnie oraz drobne poprawki stylistyczne.
+* **Badania literaturowe - sprzęt dla baz danych:** `Sprzet-dla-bazy-danych <https://github.com/karaskamil/Sprzet-dla-bazy-danych.git>`_ - zawierające pierwszy podrozdział badań literaturowych.
+* **Badania literaturowe - konfiguracja bazy danych:** `Konfiguracja <https://github.com/Youarecheck/Bazy_Danych_Tematyczne_Repo_MK.git>`_ - zawierające drugi podrozdział badań literaturowych.
+* **Badania literaturowe - kontrola i konserwacja:** `Konserwacja <https://github.com/pawlos1337/Bazy-danych-temat.git>`_ - zawierające trzeci podrozdział badań literaturowych.
+* **Badania literaturowe - monitorowanie i diagnostyka:** `Monitorowanie <https://github.com/OskarProgrammer/monitorowanie_i_diagnostyka.git>`_ - zawierające czwarty podrozdział badań literaturowych.
+* **Badania literaturowe - wydajność, skalowanie i replikacja:** `Wydajnosc <https://github.com/KMachoK/Tematyczne/blob/main/index.rst>`_ - zawierające piąty podrozdział badań literaturowych.
+* **Badania literaturowe - partycjonowanie danych:** `Partycjonowanie-Danych <https://github.com/domino0472/Partycjonowani-Danych>`_ - zawierające szósty podrozdział badań literaturowych.
+* **Badania literaturowe - bezpieczeństwo:** `Bezpieczenstwo <https://github.com/oski486/BazyDanych-Subject.git>`_ - zawierające siódmy podrozdział badań literaturowych.
+* **Badania literaturowe - kopie zapasowe i odzyskiwanie danych:** `Kopie_zapasowe <https://github.com/Koko9077/Kopie-zapasowe-i-odzyskiwanie-danych.git>`_ - zawierające ósmy podrozdział badań literaturowych.
 
 Wprowadzenie tematyczne do ćwiczeń i eksperymentów
 ==================================================

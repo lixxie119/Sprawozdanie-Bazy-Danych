@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.25)  28 JUN 2026 22:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.6.25)  28 JUN 2026 22:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -908,35 +908,9 @@ LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 1
 (C:\Users\ragna\AppData\Local\Programs\MiKTeX\tex/latex/tex-gyre\ts1qtm.fd
 File: ts1qtm.fd 2009/09/25 v1.2 font definition file for TS1/qtm
 )
-Overfull \hbox (12.52936pt too wide) in paragraph at lines 110--112
+Underfull \hbox (badness 10000) in paragraph at lines 110--112
 []\T1/qtm/b/n/10.95 In-dy-wi-du-alne re-po-zy-to-rium z pli-kami pro-jek-to-wym
-i: \T1/qtm/m/it/10.95 https://github.com/lixxie119/Sprawozdanie-
- []
-
-
-Overfull \hbox (123.6717pt too wide) in paragraph at lines 118--120
-[]\T1/qtm/b/n/10.95 Ba-da-nia li-te-ra-tu-rowe - kon-fi-gu-ra-cja bazy da-nych:
- \T1/qtm/m/it/10.95 https://github.com/Youarecheck/Bazy_Danych_Tematyczne_Repo_
-MK.git
- []
-
-
-Overfull \hbox (133.08858pt too wide) in paragraph at lines 126--128
-[]\T1/qtm/b/n/10.95 Ba-da-nia li-te-ra-tu-rowe - mo-ni-to-ro-wa-nie i dia-gno-s
-tyka: \T1/qtm/m/it/10.95 https://github.com/OskarProgrammer/monitorowanie_i_dia
-gnostyka.git
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--132
-[]\T1/qtm/b/n/10.95 Ba-da-nia li-te-ra-tu-rowe - wy-daj-no±¢, ska-lo-wa-nie i r
-e-pli-ka-cja:
- []
-
-
-Overfull \hbox (9.95615pt too wide) in paragraph at lines 134--136
-[]\T1/qtm/b/n/10.95 Ba-da-nia li-te-ra-tu-rowe - par-ty-cjo-no-wa-nie da-nych: 
-\T1/qtm/m/it/10.95 https://github.com/domino0472/Partycjonowani-
+i: [][]\T1/qtm/m/n/10.95 Sprawozdanie-Bazy-Danych-
  []
 
 [1
@@ -944,20 +918,9 @@ Overfull \hbox (9.95615pt too wide) in paragraph at lines 134--136
 
 {C:/Users/ragna/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.en
 c}]
-Underfull \hbox (badness 10000) in paragraph at lines 142--144
-[]\T1/qtm/b/n/10.95 Ba-da-nia li-te-ra-tu-rowe - ko-pie za-pa-sowe i od-zy-ski-
-wa-nie da-nych:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 142--144
-\T1/qtm/m/it/10.95 https://github.com/Koko9077/Kopie-zapasowe-i-odzyskiwanie-da
-nych.git \T1/qtm/m/n/10.95 - za-wie-ra-j¡ce ósmy
- []
-
 LaTeX Font Info:    Trying to load font information for T1+txtt on input line 1
 57.
-(C:\Users\ragna\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
+ (C:\Users\ragna\AppData\Local\Programs\MiKTeX\tex/latex/txfonts\t1txtt.fd
 File: t1txtt.fd 2000/12/15 v3.1
 )
 
@@ -968,7 +931,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 Package babel Info: 'polish' activates 'polish' shorthands.
-(babel)             Reported on input line 192.
+(babel)             Reported on input line 195.
 [2]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1314,12 +1277,12 @@ Rozdzia\l  3.
 [42
 
 ]
-<model_logiczny.jpg, id=902, 828.09375pt x 495.35063pt>
+<model_logiczny.jpg, id=913, 828.09375pt x 495.35063pt>
 File: model_logiczny.jpg Graphic file (type jpg)
 <use model_logiczny.jpg>
 Package pdftex.def Info: model_logiczny.jpg  used on input line 2739.
 (pdftex.def)             Requested size: 452.97638pt x 270.95468pt.
-<model_fizyczny_postgresql.jpg, id=903, 827.34094pt x 409.53pt>
+<model_fizyczny_postgresql.jpg, id=914, 827.34094pt x 409.53pt>
 File: model_fizyczny_postgresql.jpg Graphic file (type jpg)
 <use model_fizyczny_postgresql.jpg>
 Package pdftex.def Info: model_fizyczny_postgresql.jpg  used on input line 2750
@@ -1345,7 +1308,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [44 <./model_fizyczny_postgresql.jpg>]
-<model_fizyczny_sqlite.jpg, id=912, 861.9703pt x 409.53pt>
+<model_fizyczny_sqlite.jpg, id=923, 861.9703pt x 409.53pt>
 File: model_fizyczny_sqlite.jpg Graphic file (type jpg)
 <use model_fizyczny_sqlite.jpg>
 Package pdftex.def Info: model_fizyczny_sqlite.jpg  used on input line 2797.
@@ -1492,9 +1455,9 @@ sers/ragna/AppData/Local/Programs/MiKTeX/fonts/type1/public/tex-gyre/qtmri.pfb>
 ts/t1xtt.pfb><C:/Users/ragna/AppData/Local/Programs/MiKTeX/fonts/type1/public/t
 xfonts/tcxtt.pfb><C:/Users/ragna/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
 times/utmr8a.pfb>
-Output written on sprawozdaniebazydanych.pdf (58 pages, 806372 bytes).
+Output written on sprawozdaniebazydanych.pdf (58 pages, 806931 bytes).
 PDF statistics:
- 1120 PDF objects out of 1200 (max. 8388607)
+ 1131 PDF objects out of 1200 (max. 8388607)
  287 named destinations out of 1000 (max. 500000)
  1212 words of extra memory for PDF output out of 10000 (max. 10000000)
 

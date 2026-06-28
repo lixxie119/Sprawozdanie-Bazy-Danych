@@ -1,11 +1,11 @@
 # Fdb version 4
-["makeindex sprawozdaniebazydanych.idx"] 1782677227.40948 "sprawozdaniebazydanych.idx" "sprawozdaniebazydanych.ind" "sprawozdaniebazydanych" 1782677230.75369 0
-  "sprawozdaniebazydanych.idx" 1782677230 1880 c6b3a70294abffa5a96cd154dca85146 "pdflatex"
+["makeindex sprawozdaniebazydanych.idx"] 1782677227.40948 "sprawozdaniebazydanych.idx" "sprawozdaniebazydanych.ind" "sprawozdaniebazydanych" 1782678265.63753 0
+  "sprawozdaniebazydanych.idx" 1782678265 1880 c6b3a70294abffa5a96cd154dca85146 "pdflatex"
   (generated)
   "sprawozdaniebazydanych.ilg"
   "sprawozdaniebazydanych.ind"
   (rewritten before read)
-["pdflatex"] 1782677227.68374 "sprawozdaniebazydanych.tex" "sprawozdaniebazydanych.pdf" "sprawozdaniebazydanych" 1782677230.75417 0
+["pdflatex"] 1782678262.33074 "sprawozdaniebazydanych.tex" "sprawozdaniebazydanych.pdf" "sprawozdaniebazydanych" 1782678265.63804 0
   "C:/Users/ragna/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1782406536 124881 15aaa4a3c8c3f4bce66f8f4e5bba0edd ""
   "C:/Users/ragna/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1782406349 13333487 c73f81ce4f28ae8f7b77e697774a6acc ""
   "C:/Users/ragna/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -181,7 +181,7 @@
   "model_fizyczny_sqlite.jpg" 1782517995 104963 8dae834c7656cc21eaab635b5be3cda5 ""
   "model_logiczny.jpg" 1782517995 87712 e300d51882f1b4b82991deab6b54ae7c ""
   "sphinx.sty" 1782405052 57237 e19e1f380d737472c975e274a37a2126 ""
-  "sphinxhighlight.sty" 1782677223 7683 83fb52292c17957d9f4aadcb28c57a87 ""
+  "sphinxhighlight.sty" 1782678261 7683 83fb52292c17957d9f4aadcb28c57a87 ""
   "sphinxlatexadmonitions.sty" 1782405052 19258 40d230fa86bf8c791de90924bc0a9916 ""
   "sphinxlatexcontainers.sty" 1782405052 900 d61f923db071a7b54d3cee8a1e6935d3 ""
   "sphinxlatexgraphics.sty" 1782405052 4918 c9266041d02bc615d54b890e96e3acd3 ""
@@ -196,16 +196,16 @@
   "sphinxlatexstyletext.sty" 1782405052 6932 46506bfce90adabe816de566561356fc ""
   "sphinxlatextables.sty" 1782405052 63776 301b4897e4c838a7aa5af2eb139208e8 ""
   "sphinxmanual.cls" 1782405052 4241 7b0d7a37df7b5715fb0dbd585c52ecdb ""
-  "sphinxmessages.sty" 1782677223 763 31c217da39d039fd875c9cfed0d1a0d3 ""
+  "sphinxmessages.sty" 1782678261 763 31c217da39d039fd875c9cfed0d1a0d3 ""
   "sphinxoptionsgeometry.sty" 1782405052 2060 6c27b3eba37bde592ae8908ab2c1ac0f ""
   "sphinxoptionshyperref.sty" 1782405052 1093 e468489bae7631a7f387b4b0f7bc15d4 ""
   "sphinxpackageboxes.sty" 1782405052 36106 1be2053eb1cb9b083b3a75e3657bcb24 ""
   "sphinxpackagefootnote.sty" 1782405052 15497 e3d010897db5f6f93f75d08335769b1f ""
-  "sprawozdaniebazydanych.aux" 1782677230 45604 159f01a6514c1d106a007433159aad7c "pdflatex"
+  "sprawozdaniebazydanych.aux" 1782678265 45604 159f01a6514c1d106a007433159aad7c "pdflatex"
   "sprawozdaniebazydanych.ind" 1782677227 1541 e0a4d6ed13b227ccb3441bfdb113bf94 "makeindex sprawozdaniebazydanych.idx"
-  "sprawozdaniebazydanych.out" 1782677230 34916 c9b4eaa00c9ccea8e60d30c0b742302d "pdflatex"
-  "sprawozdaniebazydanych.tex" 1782677223 201761 e1189a6fce07fa6a574bfeacfb0467a8 ""
-  "sprawozdaniebazydanych.toc" 1782677230 14266 3614e6a6f76ebdbea3f563e40a7ca1d5 "pdflatex"
+  "sprawozdaniebazydanych.out" 1782678265 34916 c9b4eaa00c9ccea8e60d30c0b742302d "pdflatex"
+  "sprawozdaniebazydanych.tex" 1782678261 201836 ca11941609623522e9c986ff48974939 ""
+  "sprawozdaniebazydanych.toc" 1782678265 14266 3614e6a6f76ebdbea3f563e40a7ca1d5 "pdflatex"
   (generated)
   "sprawozdaniebazydanych.aux"
   "sprawozdaniebazydanych.idx"
