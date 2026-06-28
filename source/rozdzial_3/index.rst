@@ -93,42 +93,42 @@ Model fizyczny dla SQLite
 
 .. code-block:: sql
 
-CREATE TABLE klient (
-    klientId INTEGER PRIMARY KEY AUTOINCREMENT,
-    imie TEXT,
-    nazwisko TEXT,
-    pesel TEXT,
-    kod_pocztowy TEXT,
-    miasto TEXT,
-    adres TEXT,
-    telefon TEXT
-);
+	CREATE TABLE klient (
+		klientId INTEGER PRIMARY KEY AUTOINCREMENT,
+		imie TEXT,
+		nazwisko TEXT,
+		pesel TEXT,
+		kod_pocztowy TEXT,
+		miasto TEXT,
+		adres TEXT,
+		telefon TEXT
+	);
 
-CREATE TABLE pojazdy (
-    pojazdId TEXT,
-    rejestracja TEXT,
-    silnik TEXT,
-    przebieg INTEGER,
-    naped TEXT,
-    liczba_drzwi INTEGER,
-    wypozyczony INTEGER,
-    stan_techniczny TEXT
-);
+	CREATE TABLE pojazdy (
+		pojazdId TEXT,
+		rejestracja TEXT,
+		silnik TEXT,
+		przebieg INTEGER,
+		naped TEXT,
+		liczba_drzwi INTEGER,
+		wypozyczony INTEGER,
+		stan_techniczny TEXT
+	);
 
-CREATE TABLE stan_techniczny (
-    pojazdId TEXT,
-    sprawne INTEGER,
-    zarysowania TEXT,
-    data_wymiany_oleju DATE,
-    data_przegladu DATE
-);
+	CREATE TABLE stan_techniczny (
+		pojazdId TEXT,
+		sprawne INTEGER,
+		zarysowania TEXT,
+		data_wymiany_oleju DATE,
+		data_przegladu DATE
+	);
 
-CREATE TABLE wypozyczenia (
-    wypozyczeniaId INTEGER PRIMARY KEY AUTOINCREMENT,
-    klientId TEXT,
-    pojazdId TEXT,
-    data DATE,
-    ubezpieczenie TEXT,
-    ilosc_kierowcow INTEGER,
-    platnosc TEXT
-);
+	CREATE TABLE wypozyczenia (
+		wypozyczeniaId INTEGER PRIMARY KEY AUTOINCREMENT,
+		klientId TEXT,
+		pojazdId TEXT,
+		data DATE,
+		ubezpieczenie TEXT,
+		ilosc_kierowcow INTEGER,
+		platnosc TEXT
+	);

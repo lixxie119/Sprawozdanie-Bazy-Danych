@@ -34,3 +34,11 @@ language = 'pl'
 html_theme = 'alabaster'
 html_static_path = ['_static']
 autodoc_mock_imports = ["psycopg"]
+
+# -- Options for LaTeX output -------------------------------------------------
+
+latex_elements = {
+    'papersize': 'a4paper',
+    'pointsize': '11pt',
+    'extraclassoptions': 'openany,oneside',
+}

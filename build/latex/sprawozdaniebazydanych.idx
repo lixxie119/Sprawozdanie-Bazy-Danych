@@ -1,0 +1,12 @@
+\indexentry{module@\spxentry{module}!db\_queries@\spxentry{db\_queries}|hyperpage}{50}
+\indexentry{db\_queries@\spxentry{db\_queries}!module@\spxentry{module}|hyperpage}{50}
+\indexentry{sqlite\_get\_client\_summary() (w module db\_queries)@\spxentry{sqlite\_get\_client\_summary()}\spxextra{w module db\_queries}|hyperpage}{50}
+\indexentry{sqlite\_get\_popular\_drive\_types() (w module db\_queries)@\spxentry{sqlite\_get\_popular\_drive\_types()}\spxextra{w module db\_queries}|hyperpage}{51}
+\indexentry{sqlite\_get\_all\_active\_and\_historical\_ids() (w module db\_queries)@\spxentry{sqlite\_get\_all\_active\_and\_historical\_ids()}\spxextra{w module db\_queries}|hyperpage}{51}
+\indexentry{sqlite\_get\_vehicles\_above\_average\_mileage() (w module db\_queries)@\spxentry{sqlite\_get\_vehicles\_above\_average\_mileage()}\spxextra{w module db\_queries}|hyperpage}{51}
+\indexentry{sqlite\_get\_clients\_with\_multiple\_rentals() (w module db\_queries)@\spxentry{sqlite\_get\_clients\_with\_multiple\_rentals()}\spxextra{w module db\_queries}|hyperpage}{51}
+\indexentry{pg\_get\_expired\_inspections() (w module db\_queries)@\spxentry{pg\_get\_expired\_inspections()}\spxextra{w module db\_queries}|hyperpage}{52}
+\indexentry{pg\_get\_financial\_payment\_report() (w module db\_queries)@\spxentry{pg\_get\_financial\_payment\_report()}\spxextra{w module db\_queries}|hyperpage}{52}
+\indexentry{pg\_get\_system\_chronology\_report() (w module db\_queries)@\spxentry{pg\_get\_system\_chronology\_report()}\spxextra{w module db\_queries}|hyperpage}{52}
+\indexentry{pg\_get\_vehicles\_never\_rented() (w module db\_queries)@\spxentry{pg\_get\_vehicles\_never\_rented()}\spxextra{w module db\_queries}|hyperpage}{52}
+\indexentry{pg\_get\_faulty\_vehicles\_report() (w module db\_queries)@\spxentry{pg\_get\_faulty\_vehicles\_report()}\spxextra{w module db\_queries}|hyperpage}{53}

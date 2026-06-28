@@ -1,0 +1,40 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter D
+  \item \spxentry{db\_queries}
+    \subitem \spxentry{module}, \hyperpage{50}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{module}
+    \subitem \spxentry{db\_queries}, \hyperpage{50}
+
+  \indexspace
+  \bigletter P
+  \item \spxentry{pg\_get\_expired\_inspections()}\spxextra{w module db\_queries}, \hyperpage{52}
+  \item \spxentry{pg\_get\_faulty\_vehicles\_report()}\spxextra{w module db\_queries}, 
+		\hyperpage{53}
+  \item \spxentry{pg\_get\_financial\_payment\_report()}\spxextra{w module db\_queries}, 
+		\hyperpage{52}
+  \item \spxentry{pg\_get\_system\_chronology\_report()}\spxextra{w module db\_queries}, 
+		\hyperpage{52}
+  \item \spxentry{pg\_get\_vehicles\_never\_rented()}\spxextra{w module db\_queries}, 
+		\hyperpage{52}
+
+  \indexspace
+  \bigletter S
+  \item \spxentry{sqlite\_get\_all\_active\_and\_historical\_ids()}\spxextra{w module db\_queries}, 
+		\hyperpage{51}
+  \item \spxentry{sqlite\_get\_client\_summary()}\spxextra{w module db\_queries}, \hyperpage{50}
+  \item \spxentry{sqlite\_get\_clients\_with\_multiple\_rentals()}\spxextra{w module db\_queries}, 
+		\hyperpage{51}
+  \item \spxentry{sqlite\_get\_popular\_drive\_types()}\spxextra{w module db\_queries}, 
+		\hyperpage{51}
+  \item \spxentry{sqlite\_get\_vehicles\_above\_average\_mileage()}\spxextra{w module db\_queries}, 
+		\hyperpage{51}
+
+\end{sphinxtheindex}
